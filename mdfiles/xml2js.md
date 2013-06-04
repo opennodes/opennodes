@@ -29,7 +29,7 @@ Parsed Json:
 [ 'Hello World!  ' ]
 ```
 
-進階使用： 加入額外參數設定，下面範例是針對解攜出來的文字做trim的處理
+進階使用： 加入額外參數設定，下面範例是針對解攜出來的文字做trim的處理，有哪些option可以參考：https://github.com/Leonidas-from-XIV/node-xml2js#options
 
 <pre class="code" data-js="xml2js/sample02.js"></pre>
 

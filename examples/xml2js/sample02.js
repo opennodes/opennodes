@@ -8,6 +8,7 @@ console.log('Source XML:');
 console.log(xml);
 
 xml2js.parseString(xml, 
+  //定義option內容，可參考：https://github.com/Leonidas-from-XIV/node-xml2js#options
   {trim: true}, 
   function (err, result) {
     console.log('Parsed Json:');
