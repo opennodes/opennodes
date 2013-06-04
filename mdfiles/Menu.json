@@ -11,6 +11,7 @@
       {"type":"node","link":"REPL.md","name":"REPL"},
       {"type":"node","link":"Closure.md","name":"Closure"},
       {"type":"node","link":"JsonOperate.md","name":"JSON操作"},
+      {"type":"node","link":"NodeInBash.md","name":"Node.js與Bash混用"},
       {"type":"node","link":"NodeJSResource.md","name":"學習資源介紹"}
     ]
   },
@@ -35,7 +36,8 @@
   { "name": "Web Framework",
     "type": "folder",
     "nodes":[
-      {"type":"node","link":"express.md","name":"Express"}
+      {"type":"node","link":"express.md","name":"Express"},
+      {"type":"node","link":"socket.io.md","name":"Socket.io"}
     ]
   },
   { "name": "Network",
@@ -43,6 +45,7 @@
     "nodes":[
       {"type":"node","link":"domain.md","name":"domain"},
       {"type":"node","link":"native-dns.md","name":"native-dns"},
+      {"type":"node","link":"jsdom.md","name":"jsdom"},
       {"type":"node","link":"nodemailer.md","name":"nodemailer"}
     ]
   },
@@ -53,7 +56,8 @@
       {"type":"node","link":"underscore.md","name":"underscore"},
       {"type":"node","link":"node-uuid.md","name":"node-uuid"},
       {"type":"node","link":"noder.md","name":"noder"},
-      {"type":"node","link":"ttyjs.md","name":"tty.js"}
+      {"type":"node","link":"ttyjs.md","name":"tty.js"},
+      {"type":"node","link":"xml2js.md","name":"xml2js"}
     ]
   },
   { "name": "CLI tools",
