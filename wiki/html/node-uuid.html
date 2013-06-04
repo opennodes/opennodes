@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>node-uuid</title>
-    <meta name="description" content="node-uuid">
     <meta name="keywords" content="node-uuid">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
@@ -18,7 +17,7 @@
     <style>
     html, body {
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
     </style>
     <script>
@@ -32,12 +31,12 @@
     </script>
   </head>
   <body>
-  <div style="width:960px" align="left">
-  <div align="left">
-    <img src="/images/wikitpage.png" width="100px"/>
-    <img src="../images/back.png" width="40px" align="right"/>
+  <div style="width:100%" align="center">
+  <div align="left" style="width:960px">
+    <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=node-uuid.md'" title="Back to prev page"/>
+    <hr/>
   </div>
-  <hr/>
   <div align="left" style="text-align:left; width:960px;">
     <h1>node-uuid</h1>
 <p>Node.js套件中，幫忙產生類似&#39;02a2ce90-1432-11e1-8558-0b488e4fc115&#39;這樣字串的工具，提供兩種產生方式：1.時間序列方式產出，2.亂數產出。</p>
@@ -52,6 +51,11 @@
 
 <p>可以針對建立的過程添加一些參數，讓亂數...更亂一些...</p>
 <pre class="code" data-js="node-uuid/sample02.js"></pre>
+  </div>
+
+  <div style="width:960px">
+  <hr/>
+  Powered by OpenNodes
   </div>
   </div>
 

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>smartdc</title>
-    <meta name="description" content="smartdc">
     <meta name="keywords" content="smartdc">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
@@ -18,7 +17,7 @@
     <style>
     html, body {
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
     </style>
     <script>
@@ -32,12 +31,12 @@
     </script>
   </head>
   <body>
-  <div style="width:960px" align="left">
-  <div align="left">
-    <img src="/images/wikitpage.png" width="100px"/>
-    <img src="../images/back.png" width="40px" align="right"/>
+  <div style="width:100%" align="center">
+  <div align="left" style="width:960px">
+    <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=smartdc.md'" title="Back to prev page"/>
+    <hr/>
   </div>
-  <hr/>
   <div align="left" style="text-align:left; width:960px;">
     <h1>smartdc module</h1>
 <p>smartdc是一套Joyent原廠提供連線Joyent Cloud Platform - SmartDataCenter的套件，裡面提供CLI與node.js的操作方法，可以直接與cloudapi進行溝通，並且達到管理cloud machine相關的動作。</p>
@@ -64,6 +63,11 @@ sdc-describeanalytics         sdc-listkeys</code></pre>
 <h2>Sample Usage</h2>
 <pre class="code" data-js="smartdc/test-smartdc.js"></pre>
 
+  </div>
+
+  <div style="width:960px">
+  <hr/>
+  Powered by OpenNodes
   </div>
   </div>
 

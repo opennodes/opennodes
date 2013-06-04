@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>noder</title>
-    <meta name="description" content="noder">
     <meta name="keywords" content="noder">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
@@ -18,7 +17,7 @@
     <style>
     html, body {
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
     </style>
     <script>
@@ -32,12 +31,12 @@
     </script>
   </head>
   <body>
-  <div style="width:960px" align="left">
-  <div align="left">
-    <img src="/images/wikitpage.png" width="100px"/>
-    <img src="../images/back.png" width="40px" align="right"/>
+  <div style="width:100%" align="center">
+  <div align="left" style="width:960px">
+    <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=noder.md'" title="Back to prev page"/>
+    <hr/>
   </div>
-  <hr/>
   <div align="left" style="text-align:left; width:960px;">
     <h1>noder</h1>
 <p>noder是一套簡易的HTTP Server，透過指令列啟動該服務後，執行之資料夾以下的檔案則可以透過HTTP的方式存取，可以當做測試HTML, CSS時使用。</p>
@@ -67,6 +66,11 @@
 [2013-05-22 18:34:09.641] [INFO] [default] - Server running at http://127.0.0.1:1337/
 [2013-05-22 18:34:09.642] [INFO] [default] - Using log level: INFO (If you want to change, try &quot;export LOV_LEVEL=INFO&quot; in linux or &quot;set LOG_LEVEL=INFO&quot; in windows)</code></pre>
 
+  </div>
+
+  <div style="width:960px">
+  <hr/>
+  Powered by OpenNodes
   </div>
   </div>
 

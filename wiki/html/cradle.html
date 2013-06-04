@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>cradle</title>
-    <meta name="description" content="cradle">
     <meta name="keywords" content="cradle">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
@@ -18,7 +17,7 @@
     <style>
     html, body {
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
     </style>
     <script>
@@ -32,12 +31,12 @@
     </script>
   </head>
   <body>
-  <div style="width:960px" align="left">
-  <div align="left">
-    <img src="/images/wikitpage.png" width="100px"/>
-    <img src="../images/back.png" width="40px" align="right"/>
+  <div style="width:100%" align="center">
+  <div align="left" style="width:960px">
+    <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=cradle.md'" title="Back to prev page"/>
+    <hr/>
   </div>
-  <hr/>
   <div align="left" style="text-align:left; width:960px;">
     <h1>cradle</h1>
 <p>cradle是一套Apache準備給CouchDB的Node.js套件，透過該套件可以直接完全的存取CouchDB上的資源。</p>
@@ -56,6 +55,11 @@
 <p>執行test code的方法如下，注意：參數部分直接輸入test.js中script的key值即可(代表取出該值代表的function做執行的動作)</p>
 <pre><code># node examples/cradle/test.js c1</code></pre>
 
+  </div>
+
+  <div style="width:960px">
+  <hr/>
+  Powered by OpenNodes
   </div>
   </div>
 

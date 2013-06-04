@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>soap</title>
-    <meta name="description" content="soap">
     <meta name="keywords" content="soap">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
@@ -18,7 +17,7 @@
     <style>
     html, body {
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
     </style>
     <script>
@@ -32,12 +31,12 @@
     </script>
   </head>
   <body>
-  <div style="width:960px" align="left">
-  <div align="left">
-    <img src="/images/wikitpage.png" width="100px"/>
-    <img src="../images/back.png" width="40px" align="right"/>
+  <div style="width:100%" align="center">
+  <div align="left" style="width:960px">
+    <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=soap.md'" title="Back to prev page"/>
+    <hr/>
   </div>
-  <hr/>
   <div align="left" style="text-align:left; width:960px;">
     <h1>soap</h1>
 <p>這個套件是Node.js提供來連接SOAP Web Service的</p>
@@ -56,6 +55,11 @@
 <pre><code># node examples/soap/sample02.js
 { Result: &#39;0&amp;success&amp;338658&#39; }</code></pre>
 
+  </div>
+
+  <div style="width:960px">
+  <hr/>
+  Powered by OpenNodes
   </div>
   </div>
 

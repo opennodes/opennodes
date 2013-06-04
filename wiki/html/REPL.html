@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <title>REPL</title>
-    <meta name="description" content="REPL">
     <meta name="keywords" content="REPL">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
@@ -18,7 +17,7 @@
     <style>
     html, body {
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
     </style>
     <script>
@@ -32,12 +31,12 @@
     </script>
   </head>
   <body>
-  <div style="width:960px" align="left">
-  <div align="left">
-    <img src="/images/wikitpage.png" width="100px"/>
-    <img src="../images/back.png" width="40px" align="right"/>
+  <div style="width:100%" align="center">
+  <div align="left" style="width:960px">
+    <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=REPL.md'" title="Back to prev page"/>
+    <hr/>
   </div>
-  <hr/>
   <div align="left" style="text-align:left; width:960px;">
     <h1>Read-Eval-Print-Loop (REPL)</h1>
 <p>REPL，全稱：Read-Eval-Print-Loop，關於Node.js的REPL進階應用部份，借用官方網站Documents內的一段程式碼來說明。<br>REPL是一個直譯式互動執行的介面，透過這個介面，您可以打入任何Node.js的程式碼，視窗將在按下Enter時候回覆執行結果。許多腳本語言都有提供類似介面供開發人員測試或執行簡單的程式碼。<br>在此範例中，將會啓動一個Unix的Socket服務端口、一個TCP Socket的服務端口，並在執行視窗也開啓一個stdin的服務窗口，從這三個地方執行的Node程式片斷，都會反應在原執行視窗上...</p>
@@ -80,6 +79,11 @@ node via Unix socket&gt;</code></pre>
 <pre><code>$ node test.js 
 node via stdin&gt; hello</code></pre>
 
+  </div>
+
+  <div style="width:960px">
+  <hr/>
+  Powered by OpenNodes
   </div>
   </div>
 

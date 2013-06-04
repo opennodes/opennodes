@@ -5,7 +5,7 @@ promise模組是Node.js使用來達成循序操縱的一個方式，不過...說
 
 ## 套件資訊
 
-<div class="pkginfo" data-module-name="promise" data-show="version,dependencies"></div>
+<div class="pkginfo" data-module-name="node-promise" data-show="version,dependencies"></div>
 
 ## Installation
 

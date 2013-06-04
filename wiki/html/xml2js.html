@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <title>AboutIO</title>
-    <meta name="keywords" content="AboutIO">
+    <title>xml2js</title>
+    <meta name="keywords" content="xml2js">
 
     <link rel="stylesheet" href="../stylesheets/styles.css">
     <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
@@ -34,27 +34,19 @@
   <div style="width:100%" align="center">
   <div align="left" style="width:960px">
     <img src="/images/wikitpage.png" width="100px" onclick="document.location='/'" title="Back to Home"/>
-    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=AboutIO.md'" title="Back to prev page"/>
+    <img src="../images/back.png" width="40px" align="right" onclick="document.location='../index.html?page=xml2js.md'" title="Back to prev page"/>
     <hr/>
   </div>
   <div align="left" style="text-align:left; width:960px;">
-    <h1>跟IO有關的官方套件</h1>
-<h2>fs套件</h2>
-<p>fs套件提供讀取檔案系統的一些操作方式，而官方針對操作大多實作了有帶Sync跟沒帶Sync的兩個版本，其中有Sync的function都是屬於同步的操作方式，可以直接回傳值回來，而沒有Sync的function則是會有callback，在callback中接入回傳值，同時也帶入error訊息供判斷。</p>
-<pre class="code" data-js="basic/001-readdir.js"></pre>
+    <h1>xml2js</h1>
+<h2>Github Repository</h2>
+<div class="pkginfo" data-module-name="xml2js" data-show="version,dependencies"></div>
 
-<pre class="code" data-js="basic/002-readdir.js"></pre>
 
-<pre class="code" data-js="basic/002-readFile.js"></pre>
-
-<pre class="code" data-js="basic/002-deleteFile.js"></pre>
-
-<p>如果是使用沒帶Sync的function，則需要實作callback function來達到操作回傳的內容物件，範例如下：</p>
-<pre class="code" data-js="basic/002-readFile2.js"></pre>
-
-<p>另一個好用的function是stat，可以用來檢測某個路徑的檔案或是資料匣的狀態</p>
-<pre class="code" data-js="basic/002-testFileExist.js"></pre>
-
+<h2>Installation</h2>
+<pre><code>npm install xml2js</code></pre>
+<h2>Sample Usage</h2>
+<pre class="code" data-js="xml2js/sample01.js"></pre>
   </div>
 
   <div style="width:960px">
