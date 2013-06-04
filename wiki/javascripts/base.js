@@ -43,9 +43,27 @@ $(document).ready(function(){
        * 範例：<pre class="code" data-js="request/sample01.js"></pre>
        */
       $('.code').each(function(v){
-        var path = $(this).attr('data-js');
-        $(this).load('../examples/'+path);
-        $(this).before('<h3>See:<a href="/examples/'+path+'">/examples/'+path+'</a></h3>');
+        if($(this).attr('data-js')) {
+          var path = $(this).attr('data-js');
+          
+          $(this).load('../examples/'+path);
+          $(this).before('<h3>See:<a href="/examples/'+path+'">/examples/'+path+'</a></h3>');
+        } else if($(this).attr('data-html')){
+          var path = $(this).attr('data-html');
+          var _this = $(this);
+          $.ajax({
+              url:'../examples/'+path,
+              dataType: 'html'
+            }).success(
+              function(d){
+                d = d.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+                _this.html(d);
+              }
+          );
+
+          //$(this).load('../examples/'+path);
+          $(this).before('<h3>See:<a href="/examples/'+path+'">/examples/'+path+'</a></h3>');
+        }
       });
 
       /**
