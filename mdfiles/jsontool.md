@@ -1,19 +1,18 @@
-json
+jsontool
 ====
 
 ## 說明
 
 提供指令列模式操作json的排版及物件操作方式
 
-## Github Repository
+## 套件資訊
 
-* 官方參考資料：[README.md](index.html?page=../node_modules/json/README.md)
-* 官方Github：[Github repository](https://github.com/zpoley/json-command.git)
+<div class="pkginfo" data-module-name="jsontool" data-show="version,dependencies"></div>
 
 ## Installation
 
 ```
-# npm install json -g
+# npm install jsontool -g
 ```
 
 ## 範例
