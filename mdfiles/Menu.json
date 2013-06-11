@@ -84,5 +84,11 @@
     "nodes":[
       {"type":"node","link":"smartdc.md","name":"smartdc"}
     ]
+  },
+  { "name": "Other",
+    "type": "folder",
+    "nodes":[
+      {"type":"node","link":"CrossSiteSolv.md","name":"Access-Control-Allow-Origin"}
+    ]
   }
 ]
