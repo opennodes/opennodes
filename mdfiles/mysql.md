@@ -5,6 +5,10 @@ MySQL
 
 非常常用的套件，也是簡單易懂... 連線＋查詢...解決
 
+## 套件資訊
+
+<div class="pkginfo" data-module-name="mysql" data-show="version,dependencies"></div>
+
 ## Installation
 
 ```
