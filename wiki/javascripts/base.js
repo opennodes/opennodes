@@ -43,11 +43,25 @@ $(document).ready(function(){
        * 範例：<pre class="code" data-js="request/sample01.js"></pre>
        */
       $('.code').each(function(v){
+        
         if($(this).attr('data-js')) {
           var path = $(this).attr('data-js');
           
-          $(this).load('../examples/'+path);
-          $(this).before('<h3>See:<a href="/examples/'+path+'">/examples/'+path+'</a></h3>');
+          $(this).load('../examples/'+path, function(){
+            var _id = 'exp-' + path.replace(/\//g,'-').replace(/\./g,'-');
+            $(this).attr('id', 'code-' + _id);
+            
+            //Add the copy past feature
+            $(this).before('<h3>See:<a href="/examples/'+path+'">/examples/'+path+'</a>&nbsp;&nbsp;<button id="'+_id+'" class="ccopy" data-target="/examples/'+path+'" href="#">Copy</button></h3>');
+            $('#' + _id).zclip({ 
+              path:'javascripts/ZeroClipboard.swf', 
+              copy: $('#code-' + _id).html(),
+              afterCopy: function(){
+                alert('Copy Already!');
+              }
+            })
+            
+          });
         } else if($(this).attr('data-html')){
           var path = $(this).attr('data-html');
           var _this = $(this);
@@ -136,6 +150,8 @@ $(document).ready(function(){
     window.open(edit_url);
   });
 
+  
+
 });
 
 var mkdOpt = {
@@ -202,4 +218,5 @@ function format(txt) {
     return txt;
   }
 }
+
 
