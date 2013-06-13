@@ -14,11 +14,10 @@ var db_options = {
  * 執行連線動作
  */
 var mysql = new require('mysql'), db = null;
-console.log('Using %s driver...', mysql.PACKAGE.version);
 if(mysql.createConnection) { //2.0.x
   console.log('using createConnection......');
   db = mysql.createConnection(db_options);
-} if(mysql.createClient) { //0.9.x
+} else if(mysql.createClient) { //0.9.x
   console.log('using createClient......');
   db = mysql.createClient(db_options);
 } else { //more older...
