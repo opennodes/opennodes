@@ -57,7 +57,9 @@
       {"type":"node","link":"node-uuid.md","name":"node-uuid"},
       {"type":"node","link":"noder.md","name":"noder"},
       {"type":"node","link":"ttyjs.md","name":"tty.js"},
-      {"type":"node","link":"xml2js.md","name":"xml2js"}
+      {"type":"node","link":"xml2js.md","name":"xml2js"},
+      {"type":"node","link":"riak-js.md","name":"riak-js"},
+      {"type":"node","link":"log4js.md","name":"log4js"}
     ]
   },
   { "name": "CLI tools",
@@ -69,8 +71,7 @@
   { "name": "NoSQL",
     "type": "folder",
     "nodes":[
-      {"type":"node","link":"cradle.md","name":"cradle"},
-      {"type":"node","link":"riak-js.md","name":"riak-js"}
+      {"type":"node","link":"cradle.md","name":"cradle"}
     ]
   },
   { "name": "MySQL",
