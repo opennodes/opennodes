@@ -15,7 +15,9 @@ var server = require('restify').createServer();
  */
 server.get('/hello/:name', 
   function (req, res, next) {
-    res.send('hello ' + req.params.name);
+    res.send({msg: 'hello ' + req.params.name});
+    //res.send()所帶入的參數需要為json格式，否則會出現下面錯誤：
+    //{"code":"InternalError","message":"Object.keys called on non-object"}
 });
 
 /**
@@ -24,7 +26,7 @@ server.get('/hello/:name',
  */
 server.head('/hello/:name', 
   function (req, res, next) {
-    res.send('hello ' + req.params.name);
+    res.send({msg: 'hello ' + req.params.name});
 });
 
 /**
