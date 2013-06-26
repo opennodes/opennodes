@@ -6,3 +6,5 @@ log4js.loadAppender('console');
 
 //執行log
 log.info('HELLO....');
+
+log.info('Test print object %o', {aaa:123});
