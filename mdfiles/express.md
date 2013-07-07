@@ -62,6 +62,15 @@ $ cd ExpressPrj && npm install
 
 * 首先修改configure區段：
 
+express模組預設產出的template並沒有emable session功能，可透過下面的設定把session的功能打開(PS: session的實作滿多的，也有透過nosql做session的persistance，讓session可以共用在一台以上的主機中)：
+
+```
+app.use(express.cookieParser());
+app.use(express.session({secret: 'keyboard cat'}));
+```
+
+完整設定如下：
+
 ```
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -126,5 +135,53 @@ app.get('/', function(req, res){
 ```
 
 * 檢視執行狀況： http://localhost:3000
+
+## 其他
+
+### 設定Basic Authentication
+
+Express套件支援簡單的[Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication)，設定可參考下面範例：
+
+```
+app.use(express.basicAuth(username, password));
+```
+
+## View template module - express-partials
+
+新版的express已經將template系統改寫，原本使用在res.render('...', {layout:'somelayout'})需要另外載入[express-partials](https://github.com/publicclass/express-partials)模組方能使用，載入方式如下：
+
+```
+var express = require('express')
+  , partials = require('express-partials')
+  , app = express();
+
+app.use(partials());
+```
+
+### 設定CORS(Allow Cross Domain JavaScript)
+
+CORS的設定是為了讓JavaScript可以跨網域被呼叫而設立的方式，作法是在Server Response Header加上Access-Control-Allow-Origin等參數，詳細的說明可以參考：[解決Cross Site JavaScript問題](index.html?page=CrossSiteSolv.md)
+
+```
+//CORS middleware
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', config.allowedDomains);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+}
+
+//Apply configure
+app.configure(function() {
+    app.use(express.bodyParser());
+    app.use(express.cookieParser());
+    app.use(express.session({ secret: 'cool beans' }));
+    app.use(express.methodOverride());
+    app.use(allowCrossDomain); //在app.configure處帶入CORS設定
+    app.use(app.router);
+    app.use(express.static(__dirname + '/public'));
+});
+```
 
 
