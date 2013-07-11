@@ -136,9 +136,9 @@ app.get('/', function(req, res){
 
 * 檢視執行狀況： http://localhost:3000
 
-## 其他
+# 其他
 
-### 設定Basic Authentication
+## 設定Basic Authentication
 
 Express套件支援簡單的[Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication)，設定可參考下面範例：
 
@@ -184,7 +184,7 @@ app.configure(function() {
 });
 ```
 
-### 設定SSL
+## 設定SSL
 下面展示使用micloud smartos建立node.js之ssl web server，smartos在建立起來時候，會自動產生一組selfsigned.pem的key，可以省去建立openssl的時間...。
 設定node.js https時候，可以直接將key與cert都指定在selfsigned.pem上，透過該key提供ssl需要的認證金鑰...
 PS: 如果需要手動產生ssl憑證，可以參考：http://peihsinsu.blogspot.tw/2012/12/smartosself-gen-ssl.html
