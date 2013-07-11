@@ -189,12 +189,14 @@ app.configure(function() {
 設定node.js https時候，可以直接將key與cert都指定在selfsigned.pem上，透過該key提供ssl需要的認證金鑰...
 PS: 如果需要手動產生ssl憑證，可以參考：http://peihsinsu.blogspot.tw/2012/12/smartosself-gen-ssl.html
 
-Step 1:
+Step 1: 產生Express專案(如果已經有專案，可以忽略這個設定)
+
 ```
 # express ssltest && cd ssltest && npm install
 ```
 
-Step 2:
+Step 2: 修改app.js這隻程式(主要是由這隻程式再做createServer的動作)，修改內容如下：
+
 ```
 # vi app.js
 
@@ -246,7 +248,8 @@ https.createServer(options, app).listen(app.get('port'), function(){
 });
 ```
 
-Step 3 - 測試：
+Step 3 - 測試：啟動與測試
+
 ```
 # node app.js
 ```
