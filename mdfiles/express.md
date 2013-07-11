@@ -184,4 +184,71 @@ app.configure(function() {
 });
 ```
 
+### 設定SSL
+下面展示使用micloud smartos建立node.js之ssl web server，smartos在建立起來時候，會自動產生一組selfsigned.pem的key，可以省去建立openssl的時間...。
+設定node.js https時候，可以直接將key與cert都指定在selfsigned.pem上，透過該key提供ssl需要的認證金鑰...
+PS: 如果需要手動產生ssl憑證，可以參考：http://peihsinsu.blogspot.tw/2012/12/smartosself-gen-ssl.html
 
+Step 1:
+```
+# express ssltest && cd ssltest && npm install
+```
+
+Step 2:
+```
+# vi app.js
+
+var express = require('express')
+  , routes = require('./routes')
+  , https = require('https') //使用node.js https模組
+  , fs = require("fs")
+  , path = require('path');
+
+//設定https需要使用的options參數
+var key = '/opt/local/etc/openssl/private/selfsigned.pem';
+var crt = key; 
+var privateKey = fs.readFileSync(key);
+var certificate = fs.readFileSync(crt);
+var options = {
+    key: privateKey,
+    cert: certificate,
+};
+
+var app = express();
+
+app.configure(function(){
+  app.set('port', process.env.PORT || 1330);
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
+  app.use(express.favicon());
+  app.use(express.logger('dev'));
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(app.router);
+  app.use(express.static(path.join(__dirname, 'public')));
+});
+
+app.configure('development', function(){
+  app.use(express.errorHandler());
+});
+
+app.get('/', routes.index); //express default root
+
+//建立一個測試route
+app.get('/test', function(req, res){
+  res.writeHead(200);
+  res.end('TEST...');
+});
+
+//使用https來建立server, 建立過程中帶入options參數
+https.createServer(options, app).listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
+```
+
+Step 3 - 測試：
+```
+# node app.js
+```
+
+打開Browser連線：https://your.ip.address:1330/test
