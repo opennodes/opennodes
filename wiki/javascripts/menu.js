@@ -1,9 +1,7 @@
 $(document).ready(function(){
   //To get the json and parse to the menu structure
   $.getJSON('../mdfiles/Menu.json', function(arr){
-    var html = '* [GitHub](https://github.com/opennodes/opennodes.github.com)\n';
-    html += '* [Node.js](http://nodejs.org)\n';
-    html += '* [About Me](http://about.me/peihsinsu)\n\n';
+    var html = '';
 
     for(var i = 0 ; i < arr.length ; i++ ) {
       var _this = arr[i];
