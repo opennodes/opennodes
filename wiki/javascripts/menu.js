@@ -9,7 +9,7 @@ $(document).ready(function(){
         html += '<p>'+_this.name+'<br/>';
         for(var j = 0 ; j < _this.nodes.length ; j++ ) {
           var _nodes = _this.nodes[j];
-          html += '<small>['+_nodes.name+'](index.html?page='+_nodes.link+')</small>,';
+          html += '<small>['+_nodes.name+'](index.html?page='+_nodes.link+')</small>, ';
         }
         html += '<br/></p>\n\n';
       }
